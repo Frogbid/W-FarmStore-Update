@@ -167,7 +167,7 @@ VALUES ('$orderrandomno', '$uid ', '$allproductname', '$productsid', '$allproduc
                                                        </tr>
                                                        <tr>
                                                            <td style="padding: 5px 0;">Tax</td>
-                                                           <td align="right" style="padding: 5px 0;"> '.$tax.'</td>
+                                                           <td align="right" style="padding: 5px 0;"> '.(($finalTotal*2)/100).'</td>
                                                        </tr>
                                                        
                                                       
@@ -236,9 +236,9 @@ VALUES ('$orderrandomno', '$uid ', '$allproductname', '$productsid', '$allproduc
                return false;
             }
 
-            echo '<script type="text/javascript">';
-            echo "setTimeout(function () { swal.fire({title: 'Order Placed!', text: 'Order Placed Successfully', type: 'success', confirmButtonClass: 'btn-success', confirmButtonText: 'OK', },function() {window.location = 'Checkout';});";
-            echo '}, 1000);</script>';
+             echo '<script type="text/javascript">';
+             echo "setTimeout(function () { swal.fire({title: 'Order Placed!', text: 'Order Placed Successfully', type: 'success', confirmButtonClass: 'btn-success', confirmButtonText: 'OK', },function() {window.location = 'Checkout?alert=1';});";
+             echo '}, 1000);</script>';
 
          } else {
 
